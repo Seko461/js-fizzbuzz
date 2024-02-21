@@ -5,15 +5,35 @@
 }
 
 .container {
-    width: 400px;
-    height: 400px;
+
     border: 1px solid black;
+
+
 
 }
 
-li {
+.cell-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 300px;
+}
+
+.cell {
     width: 30px;
     height: 30px;
     border: 1px solid red;
     background-color: aqua;
+}
+
+.cell-fizz {
+    background-color: blue;
+}
+
+.cell-buzz {
+    background-color: green;
+}
+
+.cell-fizz-buzz {
+    background-color: yellow;
 }

@@ -27,28 +27,34 @@
 // Crea un container nel DOM, aggiungendo(attraverso la funzione append()) 
 // un elemento html con il numero o la stringa corretta da mostrare.
 
-const cellList = document.querySelector('.cell-list');
-let cell = document.createElement('li');
-cellList.append(cell);
-
-for (let i = 1; i <= 100; i++) {
-    console.log(i)
-    if (i % 3 == 0) {
-
-        console.log('Fizz');
-    }
-    else if (i % 5 == 0) {
-
-        console.log('Buzz');
-    }
-    if (i % 3 == 0 && i % 5 == 0) {
-
-        console.log('FizzBuzz');
-    }
-}
-
 //     BONUS 2:
 // Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1,
 //     a seconda che il valore inserito sia un numero, un fizz,
 //     un buzz o un fizzbuzz.Se sei a corto di idee per lo stile,
 //         potresti prendere spunto dallo screenshot fornito in consegna.
+const cellList = document.querySelector('.cell-list');
+
+
+
+for (let i = 1; i <= 100; i++) {
+    console.log(i)
+    let cell = document.createElement('li');
+    cell.classList.add('cell');
+
+    if (i % 3 == 0) {
+
+        console.log('Fizz');
+        cell.classList.add('cell-fizz');
+    }
+    else if (i % 5 == 0) {
+
+        console.log('Buzz');
+        cell.classList.add('cell-buzz');
+    }
+    if (i % 3 == 0 && i % 5 == 0) {
+
+        console.log('FizzBuzz');
+        cell.classList.add('cell-fizz-buzz');
+    }
+    cellList.appendChild(cell);
+}
