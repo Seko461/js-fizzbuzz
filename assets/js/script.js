@@ -39,21 +39,30 @@ const cellList = document.querySelector('.cell-list');
 for (let i = 1; i <= 100; i++) {
     console.log(i)
     let cell = document.createElement('li');
+    let markuplistitem = `<li>${i}</li>`
+    cell.innerHTML += markuplistitem
     cell.classList.add('cell');
+
 
     if (i % 3 == 0) {
 
         console.log('Fizz');
+        let markUpFizz = 'Fizz'
+        cell.innerHTML += markUpFizz
         cell.classList.add('cell-fizz');
     }
     else if (i % 5 == 0) {
 
         console.log('Buzz');
+        let markUpBuzz = 'Buzz'
+        cell.innerHTML += markUpBuzz
         cell.classList.add('cell-buzz');
     }
     if (i % 3 == 0 && i % 5 == 0) {
 
         console.log('FizzBuzz');
+        let markUpFizz_Buzz = 'FizzBuzz'
+        cell.innerHTML += markUpFizz_Buzz
         cell.classList.add('cell-fizz-buzz');
     }
     cellList.appendChild(cell);
