@@ -2,38 +2,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .container {
 
-    border: 1px solid black;
 
+    background-color: #0c3b4b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 2rem;
 
+    justify-content: center;
+}
 
+h1 {
+    font-size: 4rem;
+    color: white;
 }
 
 .cell-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    width: 300px;
+    width: 1200px;
+
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+
 }
 
 .cell {
-    width: 30px;
-    height: 30px;
-    border: 1px solid red;
-    background-color: aqua;
+    color: black;
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid red; */
+    background-color: #1f89b0;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
 .cell-fizz {
-    background-color: blue;
+    background-color: #27d5a2;
 }
 
 .cell-buzz {
-    background-color: green;
+    background-color: #fed06e;
 }
 
 .cell-fizz-buzz {
-    background-color: yellow;
+
+    background-color: #ed4971;
 }

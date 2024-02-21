@@ -32,38 +32,50 @@
 //     a seconda che il valore inserito sia un numero, un fizz,
 //     un buzz o un fizzbuzz.Se sei a corto di idee per lo stile,
 //         potresti prendere spunto dallo screenshot fornito in consegna.
+
+
+
+// Seleziono il contenitore della lista
 const cellList = document.querySelector('.cell-list');
 
 
 
 for (let i = 1; i <= 100; i++) {
-    console.log(i)
+    // console.log(i)
+    //creo e manipolo la cella
     let cell = document.createElement('li');
     let markuplistitem = `<li>${i}</li>`
     cell.innerHTML += markuplistitem
     cell.classList.add('cell');
 
-
+    //Trovo le celle multiplo di 3
     if (i % 3 == 0) {
 
-        console.log('Fizz');
+        // console.log('Fizz');
         let markUpFizz = 'Fizz'
-        cell.innerHTML += markUpFizz
+        //manipolo la cella
+        cell.innerHTML = markUpFizz
         cell.classList.add('cell-fizz');
     }
+    //Trovo le celle multiplo di 5
     else if (i % 5 == 0) {
 
-        console.log('Buzz');
+        // console.log('Buzz');
         let markUpBuzz = 'Buzz'
-        cell.innerHTML += markUpBuzz
+        //manipolo la cella
+        cell.innerHTML = markUpBuzz
         cell.classList.add('cell-buzz');
     }
+    //Trovo le celle multiplo di 3 e di 5
     if (i % 3 == 0 && i % 5 == 0) {
 
-        console.log('FizzBuzz');
+        // console.log('FizzBuzz');
         let markUpFizz_Buzz = 'FizzBuzz'
-        cell.innerHTML += markUpFizz_Buzz
+        //manipolo la cella
+        cell.innerHTML = markUpFizz_Buzz
         cell.classList.add('cell-fizz-buzz');
     }
-    cellList.appendChild(cell);
+
+    // stampo le celle nel DOM 
+    cellList.append(cell);
 }
